@@ -1,0 +1,75 @@
+﻿@page
+@{
+}
+
+@{ Layout = "../Shared/_Layout2.cshtml";}
+
+<section id="contact" class="contact">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+            <h2>Deposit</h2>
+            <p>Deposit Money here</p>
+        </div>
+
+        <div class="row gx-lg-0 gy-4">
+
+            <div class="col-lg-4">
+
+                <div class="info-container d-flex flex-column align-items-center justify-content-center">
+
+
+                    <div class="info-item d-flex">
+                        <i class="bi bi-envelope flex-shrink-0"></i>
+                        <div>
+                            <h4>Email:</h4>
+                            DepositAsync           <p>b.ezemenahi@genesystechhub.com</p>
+                        </div>
+                    </div><!-- End Info Item -->
+
+                    <div class="info-item d-flex">
+                        <i class="bi bi-phone flex-shrink-0"></i>
+                        <div>
+                            <h4>Call:</h4>
+                            <p>+234 905 274 2291</p>
+                        </div>
+                    </div><!-- End Info Item -->
+
+                    <div class="info-item d-flex">
+                        <i class="bi bi-clock flex-shrink-0"></i>
+                        <div>
+                            <h4>Open Hours:</h4>
+                            <p>Mon-Sat: 11AM - 23PM</p>
+                        </div>
+                    </div><!-- End Info Item -->
+                </div>
+
+            </div>
+
+            <div class="col-lg-8">
+                <form asp-controller="ATMPages" asp-action="" method="post" role="form" class="php-email-form">
+                    <div class="form-group mt-3">
+                        <input type="password" class="form-control" name="PinCode" id="Pin" placeholder="Enter your pin" required>
+                    </div>
+
+                    <div class="form-group mt-3">
+                        <input type="password" class="form-control" name="PinCode" id="Pin" placeholder="Enter new pin" required>
+                    </div>
+
+                    <div class="form-group mt-3">
+                        <input type="password" class="form-control" name="PinCode" id="Pin" placeholder="Confirm new pin" required>
+                    </div>
+
+                    <div class="my-3">
+                        <div class="loading">Loading</div>
+                        <div class="error-message">Something went wrong, Check your Old pin </div>
+                        <div class="sent-message">your Pin was successfully changed.</div>
+                    </div>
+                    <div class="text-center"><button type="submit">Submit</button></div>
+                </form>
+            </div><!-- End Contact Form -->
+
+        </div>
+
+    </div>
+</section><!-- End Contact Section -->

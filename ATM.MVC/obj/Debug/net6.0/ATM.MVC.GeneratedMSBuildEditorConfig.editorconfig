@@ -1,0 +1,101 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ATM.MVC
+build_property.RootNamespace = ATM.MVC
+build_property.ProjectDir = /Users/mac/Desktop/My c# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.MVC/
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Users/mac/Desktop/My c# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.MVC
+build_property._RazorSourceGeneratorDebug = 
+
+[/Users/mac/Desktop/My c\# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.MVC/Views/AdminPages/AddUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW5QYWdlcy9BZGRVc2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mac/Desktop/My c\# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.MVC/Views/AdminPages/DeleteUserForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW5QYWdlcy9EZWxldGVVc2VyRm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mac/Desktop/My c\# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.MVC/Views/AdminPages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW5QYWdlcy9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mac/Desktop/My c\# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.MVC/Views/AdminPages/ViewComplains.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW5QYWdlcy9WaWV3Q29tcGxhaW5zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mac/Desktop/My c\# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.MVC/Views/AdminPages/ViewWorkFlow.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW5QYWdlcy9WaWV3V29ya0Zsb3cuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mac/Desktop/My c\# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.MVC/Views/ATMPages/ChangePin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQVRNUGFnZXMvQ2hhbmdlUGluLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mac/Desktop/My c\# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.MVC/Views/ATMPages/Deposit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQVRNUGFnZXMvRGVwb3NpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mac/Desktop/My c\# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.MVC/Views/ATMPages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQVRNUGFnZXMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mac/Desktop/My c\# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.MVC/Views/ATMPages/TransferForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQVRNUGFnZXMvVHJhbnNmZXJGb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mac/Desktop/My c\# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.MVC/Views/ATMPages/View_History.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQVRNUGFnZXMvVmlld19IaXN0b3J5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mac/Desktop/My c\# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.MVC/Views/ATMPages/WithdrawalForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQVRNUGFnZXMvV2l0aGRyYXdhbEZvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mac/Desktop/My c\# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.MVC/Views/Home/AdminLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9BZG1pbkxvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mac/Desktop/My c\# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.MVC/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mac/Desktop/My c\# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.MVC/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mac/Desktop/My c\# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.MVC/Views/Shared/_Layout1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQxLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mac/Desktop/My c\# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.MVC/Views/Shared/_Layout2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mac/Desktop/My c\# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.MVC/Views/Shared/_Layout3.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mac/Desktop/My c\# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.MVC/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mac/Desktop/My c\# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.MVC/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mac/Desktop/My c\# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.MVC/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mac/Desktop/My c\# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.MVC/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-p5yxkjyvmp
