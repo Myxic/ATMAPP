@@ -1,0 +1,16 @@
+﻿using System;
+using ATMDAL.Model;
+
+namespace ATM.DAL.Interface
+{
+    public interface IAdminCurdOperation
+    {
+
+        Task<Admin> GetAdminAsync(string Pin);
+
+        
+
+        
+    }
+}
+

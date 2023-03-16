@@ -1,0 +1,40 @@
+﻿using System;
+using System.Collections;
+using ATM.BLL.Interface;
+using ATMDAL.Model;
+
+namespace ATM.BLL.Implementation
+{
+    public class AdminOperation : IAdminOperations
+    {
+        public AdminOperation()
+        {
+        }
+
+        public Task<bool> CreateNewCustomerRecordAsync(Admin admin)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> DeleteCustomerRecordsAsync(Admin admin, string CustomerCardNo)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<IEnumerable> GetAdminWorkFlowAsync()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<IEnumerable> GetComplainsAsync()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> UpdateCustomerRecordsAsync(Admin admin, string CustomerCardNo)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}
+

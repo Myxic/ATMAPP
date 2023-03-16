@@ -1,0 +1,20 @@
+﻿<Properties StartupConfiguration="{75E33778-4CD4-4900-8136-054E3F74AA64}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ATM.MVC/Controllers/AdminPagesController.cs">
+    <Files>
+      <File FileName="ATM.MVC/Controllers/ATMPagesController.cs" />
+      <File FileName="ATM.MVC/Views/Home/Index.cshtml" />
+      <File FileName="ATM.MVC/Views/Home/AdminLogin.cshtml" />
+      <File FileName="ATM.MVC/Controllers/AdminPagesController.cs" Line="45" Column="27" />
+      <File FileName="ATM.DAL/Interface /IAdminCurdOperation.cs" />
+      <File FileName="ATM.DAL/Implementation /AdminCurdOperation.cs" />
+      <File FileName="ATM.DAL/Interface /ICustomerCurdOperation.cs" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.ATM.MVC PreferredExecutionTarget="/Applications/Firefox.app" />
+</Properties>

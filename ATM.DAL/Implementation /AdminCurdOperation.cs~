@@ -1,0 +1,13 @@
+﻿using System;
+using ATM.DAL.Interface;
+
+namespace ATM.DAL.Implementation
+{
+    public class AdminCurdOperation : IAdminCurdOperation
+    {
+        public AdminCurdOperation()
+        {
+        }
+    }
+}
+

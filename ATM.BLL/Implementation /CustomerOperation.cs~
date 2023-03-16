@@ -1,0 +1,40 @@
+﻿using System;
+using System.Collections;
+using ATM.BLL.Interface;
+using ATMDAL.Model;
+
+namespace ATM.BLL.Implementation
+{
+    public class CustomerOperation : ICustomerOperation
+    {
+        public CustomerOperation()
+        {
+        }
+
+        public Task<bool> DepositAsync(string CardNo, decimal Amount)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<IEnumerable> TransationHistoryAsync(Customer customer)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> TransferAsync(string CustomerCardNo, decimal Amount, string RecieverCardNo)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<decimal> ViewBalanceAsync(Customer customer)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> WithdrawalAsync(string CardNo, decimal Amount)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}
+

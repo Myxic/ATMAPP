@@ -1,0 +1,10 @@
+﻿using System;
+namespace ATM.DAL.Interface
+{
+    public interface ICustomerCurdOperation
+    {
+
+
+    }
+}
+

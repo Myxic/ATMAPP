@@ -1,0 +1,14 @@
+/Users/mac/Desktop/My c# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.DAL/bin/Debug/net6.0/ATM.DAL.deps.json
+/Users/mac/Desktop/My c# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.DAL/bin/Debug/net6.0/ATM.DAL.runtimeconfig.json
+/Users/mac/Desktop/My c# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.DAL/bin/Debug/net6.0/ATM.DAL.dll
+/Users/mac/Desktop/My c# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.DAL/bin/Debug/net6.0/ATM.DAL.pdb
+/Users/mac/Desktop/My c# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.DAL/obj/Debug/net6.0/ATM.DAL.csproj.AssemblyReference.cache
+/Users/mac/Desktop/My c# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.DAL/obj/Debug/net6.0/ATM.DAL.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mac/Desktop/My c# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.DAL/obj/Debug/net6.0/ATM.DAL.AssemblyInfoInputs.cache
+/Users/mac/Desktop/My c# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.DAL/obj/Debug/net6.0/ATM.DAL.AssemblyInfo.cs
+/Users/mac/Desktop/My c# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.DAL/obj/Debug/net6.0/ATM.DAL.csproj.CoreCompileInputs.cache
+/Users/mac/Desktop/My c# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.DAL/obj/Debug/net6.0/ATM.DAL.dll
+/Users/mac/Desktop/My c# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.DAL/obj/Debug/net6.0/refint/ATM.DAL.dll
+/Users/mac/Desktop/My c# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.DAL/obj/Debug/net6.0/ATM.DAL.pdb
+/Users/mac/Desktop/My c# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.DAL/obj/Debug/net6.0/ATM.DAL.genruntimeconfig.cache
+/Users/mac/Desktop/My c# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.DAL/obj/Debug/net6.0/ref/ATM.DAL.dll

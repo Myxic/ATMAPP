@@ -1,0 +1,20 @@
+﻿using System;
+using System.Collections;
+using ATMDAL.Model;
+
+namespace ATM.BLL.Interface
+{
+    public interface IAdminOperations
+    {
+        Task<bool> UpdateCustomerRecordsAsync(Admin admin, string CustomerCardNo);
+
+        Task<bool> CreateNewCustomerRecordAsync(Admin admin);
+
+        Task<bool> DeleteCustomerRecordsAsync(Admin admin, string CustomerCardNo);
+
+        Task<IEnumerable> GetAdminWorkFlowAsync();
+
+        Task<IEnumerable> GetComplainsAsync();
+    }
+}
+
