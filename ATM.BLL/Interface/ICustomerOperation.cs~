@@ -1,0 +1,20 @@
+﻿using System;
+using System.Collections;
+using ATMDAL.Model;
+
+namespace ATM.BLL.Interface
+{
+    public interface ICustomerOperation
+    {
+        Task<decimal> ViewBalanceAsync(Customer customer);
+
+        Task<bool> WithdrawalAsync(string CardNo,decimal Amount);
+
+        Task<bool> TransferAsync(string CustomerCardNo, decimal Amount, string RecieverCardNo);
+
+        Task<bool> DepositAsync(string CardNo, decimal Amount);
+
+        Task<IEnumerable> TransationHistoryAsync(Customer customer);
+    }
+}
+

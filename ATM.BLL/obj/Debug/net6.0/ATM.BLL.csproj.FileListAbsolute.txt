@@ -1,0 +1,15 @@
+/Users/mac/Desktop/My c# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.BLL/bin/Debug/net6.0/ATM.BLL.deps.json
+/Users/mac/Desktop/My c# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.BLL/bin/Debug/net6.0/ATM.BLL.dll
+/Users/mac/Desktop/My c# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.BLL/bin/Debug/net6.0/ATM.BLL.pdb
+/Users/mac/Desktop/My c# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.BLL/bin/Debug/net6.0/ATM.DAL.dll
+/Users/mac/Desktop/My c# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.BLL/bin/Debug/net6.0/ATM.DAL.pdb
+/Users/mac/Desktop/My c# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.BLL/obj/Debug/net6.0/ATM.BLL.csproj.AssemblyReference.cache
+/Users/mac/Desktop/My c# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.BLL/obj/Debug/net6.0/ATM.BLL.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mac/Desktop/My c# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.BLL/obj/Debug/net6.0/ATM.BLL.AssemblyInfoInputs.cache
+/Users/mac/Desktop/My c# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.BLL/obj/Debug/net6.0/ATM.BLL.AssemblyInfo.cs
+/Users/mac/Desktop/My c# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.BLL/obj/Debug/net6.0/ATM.BLL.csproj.CoreCompileInputs.cache
+/Users/mac/Desktop/My c# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.BLL/obj/Debug/net6.0/ATM.BLL.csproj.CopyComplete
+/Users/mac/Desktop/My c# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.BLL/obj/Debug/net6.0/ATM.BLL.dll
+/Users/mac/Desktop/My c# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.BLL/obj/Debug/net6.0/refint/ATM.BLL.dll
+/Users/mac/Desktop/My c# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.BLL/obj/Debug/net6.0/ATM.BLL.pdb
+/Users/mac/Desktop/My c# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.BLL/obj/Debug/net6.0/ref/ATM.BLL.dll

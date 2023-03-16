@@ -1,0 +1,9 @@
+﻿using System;
+namespace ATM.DAL.Model
+{
+    public class Complains
+    {
+        public int Id { get; set; } = null!;
+    }
+}
+

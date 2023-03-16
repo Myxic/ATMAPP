@@ -1,0 +1,18 @@
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+
+namespace DataLayer.Model
+{
+    public class Admin
+    {
+        [Key]
+        public int AdminId;
+        [Required]
+        public string AdminName { get; set; } = null!;
+        [Required]
+        public string AdminPin { get; set; } = null!;
+        [Required]
+        public string? Workflow { get; set; }
+    }
+}
+

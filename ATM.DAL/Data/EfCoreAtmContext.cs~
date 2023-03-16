@@ -1,0 +1,19 @@
+﻿using System;
+using DataLayer.Model;
+using Microsoft.EntityFrameworkCore;
+
+namespace DataLayer.Data
+{
+    public class EfCoreAtmContext : DbContext
+    {
+        public DbSet<Admin> Admins { get; set; } = null!;
+
+        public DbSet<Customer> Customers { get; set; } = null!;
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer(@"Data Source = localhost,1433;User Id=sa;Password=Strong.Pwd-123;Initial Catalog=AtmEfDB;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+	    }
+    }
+}
+
