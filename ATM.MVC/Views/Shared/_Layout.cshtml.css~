@@ -1,0 +1,31 @@
+﻿body {
+    font-family: "Open Sans", sans-serif;
+    color: #555555;
+}
+
+a {
+    text-decoration: none;
+    color: #7cc576;
+}
+
+    a:hover {
+        color: #9ed49a;
+        text-decoration: none;
+    }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Montserrat", sans-serif;
+}
+/*--------------------------------------------------------------
+# Disable AOS delay on mobile
+--------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+  [data-aos-delay] {
+    transition-delay: 0 !important;
+  }
+}

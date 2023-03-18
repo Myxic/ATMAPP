@@ -1,8 +1,7 @@
-﻿@model IEnumerable<ATM.DAL.Model.Workflow>
-@{
-    Layout = "../Shared/_Layout3.cshtml";
+﻿@model IEnumerable<ATM.DAL.Model.Complains>
 
-}
+@{ Layout = "../Shared/_Layout3.cshtml";}
+
 @if (@TempData["SuccessMsg"] != null)
 {
     <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -45,23 +44,27 @@
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">Date</th>
-                                <th scope="col">Time</th>
+                                <th scope="col">Card Number</th>
+                                <th scope="col">Subject</th>
                                 <th scope="col">Report</th>
                             </tr>
                         </thead>
                         <tbody>
+
                             @{
-                                foreach (var workflow in Model.Select((value, i) => new { value, i }))
+                                foreach (var complain in Model.Select((value, i) => new { value, i }))
                                 {
                                     <tr>
-                                        <th scope="row">@(workflow.i + 1)</th>
-                                        <td>@workflow.value.Date</td>
-                                        <td>@workflow.value.Time</td>
-                                        <td>@workflow.value.WorkTimeLine</td>
+                                        <th scope="row">@(complain.i + 1)</th>
+                                        <td>@complain.value.CardNo</td>
+                                        <td>@complain.value.Subject</td>
+                                        <td>@complain.value.Reports</td>
+                                       
                                     </tr>
                                 }
                             }
+                         
+
                         </tbody>
                     </table>
                     <!-- End Table with stripped rows -->

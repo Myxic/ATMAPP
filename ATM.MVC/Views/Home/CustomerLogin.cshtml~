@@ -1,10 +1,11 @@
 ﻿@{
-
+    
     Layout = "../SHared/_Layout4.cshtml";
 
-    ViewData["Title"] = "Admin Login";
+    ViewData["Title"] = " Customer Login";
 }
- <main>
+
+<main>
     <div class="container">
 
         <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
@@ -28,11 +29,12 @@
                                     <p class="text-center small">Enter your username & password to login</p>
                                 </div>
 
-                                <form class="row g-3 needs-validation" novalidate  asp-controller="AdminPages" asp-action="LoginValidation">
+                                <form class="row g-3 needs-validation" novalidate  asp-controller="ATMPages" asp-action="LoginValidation">
+
                                     <div class="col-12">
-                                        <label for="Name" class="form-label">Name</label>
-                                        <input type="text" name="Name" class="form-control" id="Name" required>
-                                        <div class="invalid-feedback">Please enter Company Admin Name!</div>
+                                        <label for="CardNo" class="form-label">Card Number</label>
+                                        <input type="text" name="CardNo" class="form-control" id="CardNo" required>
+                                        <div class="invalid-feedback">Please enter your Card number!</div>
                                     </div>
 
                                     <div class="col-12">
