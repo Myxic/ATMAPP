@@ -1,20 +1,22 @@
 ﻿using System;
 using System.Collections;
+using ATM.BLL.Models;
 using ATM.DAL.Model;
+using Microsoft.VisualBasic;
 
 namespace ATM.BLL.Interface
 {
     public interface IAdminOperations
     {
-        bool UpdateCustomerRecords(Admin admin, string CustomerCardNo, Customer User);
+        Task<(bool successful, string msg)> UpdateCustomerRecordsAsync(Admin admin, UpdateCustomer User);
 
-        bool CreateNewCustomerRecord(Admin admin, Customer customer);
+        Task<(bool successful,string msg)> CreateNewCustomerRecordAsync(Admin admin, Customer customer);
 
-        bool DeleteCustomerRecords(Admin admin, string CustomerCardNo);
+        Task<(bool successful, string msg)> DeleteCustomerRecordsAsync(Admin admin, string CustomerCardNo);
 
-        IEnumerable GetAdminWorkFlow();
+        Task<IEnumerable<Workflow>> GetAdminWorkFlowAsync(Admin admin);
 
-        IEnumerable GetComplains();
+        Task<IEnumerable<Complains>> GetComplainsAsync();
     }
 }
 

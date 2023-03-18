@@ -11,10 +11,27 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
+    <Folder Include="wwwroot\lib\bootstrap\vendor\apexcharts\" />
+    <Folder Include="wwwroot\lib\bootstrap\vendor\simple-datatables\" />
+    <Folder Include="wwwroot\lib\bootstrap\vendor\tinymce\" />
+    <Folder Include="wwwroot\lib\bootstrap\vendor\boxicons\" />
+    <Folder Include="wwwroot\lib\bootstrap\vendor\quill\" />
+    <Folder Include="wwwroot\lib\bootstrap\vendor\remixicon\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ATM.BLL\ATM.BLL.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\lib\bootstrap\vendor\apexcharts\" />
+    <Content Remove="wwwroot\lib\bootstrap\vendor\simple-datatables\" />
+    <Content Remove="wwwroot\lib\bootstrap\vendor\tinymce\" />
+    <Content Remove="wwwroot\lib\bootstrap\vendor\boxicons\" />
+    <Content Remove="wwwroot\lib\bootstrap\vendor\quill\" />
+    <Content Remove="wwwroot\lib\bootstrap\vendor\remixicon\" />
   </ItemGroup>
 </Project>

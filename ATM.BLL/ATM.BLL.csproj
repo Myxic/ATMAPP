@@ -9,10 +9,12 @@
   <ItemGroup>
     <None Remove="Implementation \" />
     <None Remove="Interface\" />
+    <None Remove="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Implementation \" />
     <Folder Include="Interface\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ATM.DAL\ATM.DAL.csproj" />
