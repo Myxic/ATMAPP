@@ -2,6 +2,7 @@ using ATM.BLL.Interface;
 using ATM.BLL.Implementation;
 using ATM.DAL.Repository;
 using ATM.DAL.Data;
+using TodoList.DAL.Repository;
 using Microsoft.EntityFrameworkCore;
 
 namespace ATM.MVC;
@@ -23,16 +24,13 @@ public class Program
         // Add services to the container.
         builder.Services.AddControllersWithViews();
 
-        //builder.Services.AddScoped<IUnitOfWork, UnitOfWork<AtmDbContext>>();
+        builder.Services.AddScoped<ICustomerOperation, CustomerOperation>();
 
-        //builder.Services.AddScoped<ICustomerOperation, CustomerOperation>();
-
-        //builder.Services.AddScoped<IAdminOperations, AdminOperation>();
+        builder.Services.AddScoped<IAdminOperations, AdminOperation>();
 
         //builder.Services.AddScoped<IRepository, Repository>();
-          
-        //builder.Services.AddI
 
+        //builder.Services.AddScoped<IUnitOfWork, UnitOfWork<EfCoreAtmContext>>();
 
         var app = builder.Build();
 
