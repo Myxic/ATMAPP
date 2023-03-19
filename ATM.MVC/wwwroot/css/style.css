@@ -31,8 +31,8 @@ h6 {
 #hero {
     width: 100%;
     height: 100vh;
-    /*    background: url("../img/hero-bg.png");*/
-    background: url("../img/hero-bg-abstract.jpg");
+    background: url("../img/hero-bg.png");
+   
     position: relative;
 }
 
