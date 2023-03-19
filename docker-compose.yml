@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  atm.mvc:
+    image: ${DOCKER_REGISTRY-}atm
+    build:
+      context: .
+      dockerfile: ATM.MVC/Dockerfile

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATM.BLL", "ATM.BLL\ATM.BLL.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATM.MVC", "ATM.MVC\ATM.MVC.csproj", "{75E33778-4CD4-4900-8136-054E3F74AA64}"
 EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{C58C578E-7E37-4E19-BEE8-AA0D02609483}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{75E33778-4CD4-4900-8136-054E3F74AA64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75E33778-4CD4-4900-8136-054E3F74AA64}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75E33778-4CD4-4900-8136-054E3F74AA64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C58C578E-7E37-4E19-BEE8-AA0D02609483}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C58C578E-7E37-4E19-BEE8-AA0D02609483}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C58C578E-7E37-4E19-BEE8-AA0D02609483}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C58C578E-7E37-4E19-BEE8-AA0D02609483}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
