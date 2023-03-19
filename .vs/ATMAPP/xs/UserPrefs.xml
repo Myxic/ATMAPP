@@ -1,11 +1,11 @@
-﻿<Properties StartupConfiguration="{75E33778-4CD4-4900-8136-054E3F74AA64}|Default">
+﻿<Properties StartupConfiguration="{C58C578E-7E37-4E19-BEE8-AA0D02609483}|Default">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ATM.MVC/Views/Shared/_Layout4.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ATM.MVC/Controllers/AdminPagesController.cs">
     <Files>
       <File FileName="ATM.MVC/Controllers/ATMPagesController.cs" />
       <File FileName="ATM.MVC/Views/Home/Index.cshtml" />
       <File FileName="ATM.MVC/Views/Home/AdminLogin.cshtml" />
-      <File FileName="ATM.MVC/Controllers/AdminPagesController.cs" />
+      <File FileName="ATM.MVC/Controllers/AdminPagesController.cs" Line="55" Column="32" />
       <File FileName="ATM.DAL/Interface /IAdminCurdOperation.cs" />
       <File FileName="ATM.DAL/Implementation /AdminCurdOperation.cs" />
       <File FileName="ATM.DAL/Interface /ICustomerCurdOperation.cs" />
@@ -26,7 +26,7 @@
       <File FileName="ATM.MVC/Views/AdminPages/UpdateUser.cshtml" />
       <File FileName="ATM.MVC/Views/Shared/_Layout.cshtml" />
       <File FileName="ATM.MVC/Controllers/HomeController.cs" />
-      <File FileName="ATM.MVC/Views/Shared/_Layout4.cshtml" Line="39" Column="45" />
+      <File FileName="ATM.MVC/Views/Shared/_Layout4.cshtml" />
       <File FileName="ATM.MVC/Views/AdminPages/AddUser.cshtml" />
       <File FileName="ATM.MVC/Program.cs" />
       <File FileName="ATM.DAL/Repository/UnitOfWork.cs" />
@@ -35,12 +35,17 @@
       <File FileName="ATM.DAL/Repository/IRepository.cs" />
       <File FileName="ATM.MVC/Views/Shared/_Layout.cshtml.css" />
       <File FileName="ATM.MVC/Views/Shared/_Layout.cshtml.css~" />
-      <File FileName="ATM.MVC/wwwroot/css/style.css" Line="34" Column="5" />
+      <File FileName="ATM.MVC/wwwroot/css/style.css" />
       <File FileName="ATM.DAL/Entities/Workflow.cs" />
       <File FileName="ATM.DAL/Entities/Complains.cs" />
       <File FileName="ATM.MVC/Views/AdminPages/ViewComplains.cshtml" />
       <File FileName="ATM.MVC/Views/AdminPages/ViewWorkFlow.cshtml" />
-      <File FileName="ATM.MVC/Views/Home/CustomerLogin.cshtml" Line="1" Column="1" />
+      <File FileName="ATM.MVC/Views/Home/CustomerLogin.cshtml" />
+      <File FileName="ATM.DAL/Entities/Customer.cs" />
+      <File FileName="ATM.MVC/Views/AdminPages/DeleteUserForm.cshtml" />
+      <File FileName="ATM.BLL/Models/DeleteCustomer.cs" />
+      <File FileName="ATM.MVC/Dockerfile" Line="25" Column="1" />
+      <File FileName="docker-compose.yml" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -49,23 +54,16 @@
             <Node name="ATM.BLL" expanded="True">
               <Node name="Implementation " expanded="True" />
               <Node name="Interface" expanded="True" />
+              <Node name="Models" expanded="True" />
             </Node>
             <Node name="ATM.DAL" expanded="True">
               <Node name="Entities" expanded="True" />
             </Node>
             <Node name="ATM.MVC" expanded="True">
-              <Node name="Controllers" expanded="True" />
-              <Node name="Views" expanded="True">
-                <Node name="AdminPages" expanded="True" />
-                <Node name="Home" expanded="True" />
-                <Node name="Shared" expanded="True" />
+              <Node name="Controllers" expanded="True">
+                <Node name="AdminPagesController.cs" selected="True" />
               </Node>
-              <Node name="wwwroot" expanded="True">
-                <Node name="css" expanded="True" />
-                <Node name="lib" expanded="True">
-                  <Node name="bootstrap" expanded="True" />
-                </Node>
-              </Node>
+              <Node name="Views" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -77,5 +75,6 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.docker-compose PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.ItemProperties.ATM.MVC PreferredExecutionTarget="/Applications/Firefox.app" />
 </Properties>
