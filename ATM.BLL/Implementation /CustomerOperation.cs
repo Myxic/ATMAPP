@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections;
+using System.Reflection;
 using System.Threading.Tasks;
 using ATM.BLL.Interface;
+using ATM.BLL.Models;
 using ATM.DAL.Data;
 using ATM.DAL.Model;
+using ATM.DAL.Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query;
 
@@ -11,128 +14,145 @@ namespace ATM.BLL.Implementation
 {
     public class CustomerOperation : ICustomerOperation
     {
-        private readonly DAL.Repository.IRepository<Customer> _CustomerRepo;
 
-        public CustomerOperation()
+        private readonly IUnitOfWork _unitOfWork;
+        private readonly IRepository<Customer> _CustomerRepo;
+        private readonly IRepository<Admin> _AdminRepo;
+        private readonly IRepository<Workflow> _WorkflowRepo;
+        private readonly IRepository<Complains> _ComplainsRepo;
+        private readonly IRepository<TransationRecords> _transationRepo;
+
+        public CustomerOperation(IUnitOfWork unitOfWork)
         {
+            _unitOfWork = unitOfWork;
+            _AdminRepo = _unitOfWork.GetRepository<Admin>();
+            _CustomerRepo = _unitOfWork.GetRepository<Customer>();
+            _WorkflowRepo = _unitOfWork.GetRepository<Workflow>();
+            _ComplainsRepo = _unitOfWork.GetRepository<Complains>();
+            _transationRepo = _unitOfWork.GetRepository<TransationRecords>();
+
         }
 
-        public async Task<bool> ComplainsAsync(Complains complains)
+        public async Task<(bool successful, string msg)> ChangePinAsync(ChangePinModel changePin)
         {
             try
             {
-                using (var context = new AtmDbContext())
-                {
-                    var Complain = new Complains
-                    {
-                        Subject = complains.Subject,
-                        CardNo = complains.CardNo,
-                        Reports = complains.Reports
-                    };
-                    await context.Complains.AddAsync(Complain);
-                    await context.SaveChangesAsync();
+                var User = await _CustomerRepo.GetSingleByAsync(a => a.PinNo == changePin.CurrentPin);
 
-                    return true;
+                if (changePin.Newpin == changePin.ConfirmNewPin)
+                {
+                    User.PinNo = changePin.Newpin;
+
+                    var savechanges = await _unitOfWork.SaveChangesAsync();
+                    return savechanges > 0 ? (true, $"Task:Change of Pin was successfully") : (false, "Failed To save changes!");
                 }
+                return (false, "Change of Pin failed");
             }
             catch (Exception ex)
             {
-                return false;
+                return (false, "Change of Pin failed");
             }
         }
 
-        public async Task<bool> DepositAsync(string CardNo, decimal Amount)
+        public async Task<(bool successful, string msg)> ComplainsAsync(Complains complains)
         {
-            using (var context = new AtmDbContext())
+            try
             {
-                var User = await context.Customers.SingleOrDefaultAsync(a => a.CardNo == $"\"{CardNo}\"");
-
-                if (User != null)
+                var Complain = new Complains
                 {
-                    User.Balance = User.Balance + Amount;
+                    Subject = complains.Subject,
+                    CardNo = complains.CardNo,
+                    Reports = complains.Reports
+                };
+                await _ComplainsRepo.AddAsync(Complain);
+                await _unitOfWork.SaveChangesAsync();
 
-                    await context.SaveChangesAsync();
+                return (true, "Complain sent successfully");
 
-                    return true;
-                }
-                else
-                {
-                    return false; 
-		        }
-	        }
-        }
-
-        public  Task<IEnumerable<TransationRecords>> GetTransationHistoryAsync(Customer customer)
-        {
-            // using (var context = new AtmDbContext())
-            // {
-            //     Task<IEnumerable<TransationRecords>> GetAllAsync(Func<IQueryable<TransationRecords>, IOrderedQueryable<T>> orderBy = null, Func<IQueryable<T>, IIncludableQueryable<T, object>> include = null);
-
-
-            //     var Records = await context.Customers.GetAllAsync(include:  => u.Inclu)
-
-            //     return Records;
-
-            //     //return (await _userRepo.GetAllAsync(include: u => u.Include(t => t.TodoList))).Select(u => new UserWithTaskVM
-            //     //{
-            //     //    Fullname = u.FullName,
-            //     //    Tasks = u.TodoList.Select(t => new TaskVM
-            //     //    {
-            //     //        Title = t.Title,
-            //     //        Description = t.Description,
-            //     //        DueDate = t.DueDate.ToString("d"),
-            //     //        Priority = t.Priority.ToString(),
-            //     //        Status = t.IsDone ? "Done" : "Not Done"
-            //     //    })
-            //     //});
-            // }
-            throw new NotImplementedException() ;
-        }
-
-            
-        
-
-        public async Task<bool> TransferAsync(string CustomerCardNo, decimal Amount, string RecieverCardNo)
-        {
-            using (var context = new AtmDbContext())
-            {
-                var Sender = await context.Customers.SingleOrDefaultAsync(a => a.CardNo == $"\"{CustomerCardNo}\"");
-
-                var Reciever = await context.Customers.SingleOrDefaultAsync(a => a.CardNo == $"\"{RecieverCardNo}\"");
-
-                if (Sender != null && Reciever != null)
-                {
-                    Sender.Balance = Sender.Balance - Amount;
-
-                    Reciever.Balance = Reciever.Balance + Amount;
-
-                    var TransationSender = new TransationRecords()
-                    {
-                        Customer = Sender,
-                        Date = DateTime.Now.ToLongDateString(),
-                        Time = DateTime.Now.ToShortTimeString(),
-                        Reports = $"Transfered #{Amount} to {Reciever.CustomerName}"
-                    };
-                    var Transationreciever = new TransationRecords()
-                    {
-                        Customer = Reciever,
-                        Date = DateTime.Now.ToLongDateString(),
-                        Time = DateTime.Now.ToShortTimeString(),
-                        Reports = $"Recieved #{Amount} from {Sender.CustomerName}"
-                    };
-
-                   
-                    await context.Transations.AddAsync(TransationSender);
-                    await context.Transations.AddAsync(Transationreciever);
-                    await context.SaveChangesAsync();
-
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
             }
+            catch (Exception ex)
+            {
+                return (false, "Complain not sent");
+            }
+        }
+
+        public async Task<(bool successful, string msg)> DepositAsync(DepositOrWithdraw deposit)
+        {
+
+            var User = await _CustomerRepo.GetSingleByAsync(a => a.PinNo == $"\"{deposit.CustomerPin}\"");
+
+            if (User != null)
+            {
+                User.Balance = User.Balance + deposit.Amount;
+
+                var TransationSender = new TransationRecords()
+                {
+                    Customer = User,
+                    Date = DateTime.Now.ToLongDateString(),
+                    Time = DateTime.Now.ToShortTimeString(),
+                    Reports = $"Withdrew #{deposit.Amount} from account"
+                };
+
+                await _transationRepo.AddAsync(TransationSender);
+                await _unitOfWork.SaveChangesAsync();
+
+                return (true, "Deposit Successful");
+            }
+            else
+            {
+                return (false, "Deposit Unsuccessful");
+            }
+
+        }
+
+        public Task<IEnumerable<TransationRecords>> GetTransationHistoryAsync(Customer customer)
+        {
+
+            var history = _transationRepo.GetByAsync(a => a.Customer == customer);
+
+            return history;
+
+        }
+        public async Task<(bool successful, string msg)> TransferAsync(TransferModel transferModel)
+        {
+
+            var Sender = await _CustomerRepo.GetSingleByAsync(a => a.PinNo == $"\"{transferModel.UserPin}\"");
+
+            var Reciever = await _CustomerRepo.GetSingleByAsync(a => a.CardNo == $"\"{transferModel.ReceiverCardNo}\"");
+
+            if (Sender != null && Reciever != null)
+            {
+                Sender.Balance = Sender.Balance - transferModel.Amount;
+
+                Reciever.Balance = Reciever.Balance + transferModel.Amount;
+
+                var TransationSender = new TransationRecords()
+                {
+                    Customer = Sender,
+                    Date = DateTime.Now.ToLongDateString(),
+                    Time = DateTime.Now.ToShortTimeString(),
+                    Reports = $"Transfered #{transferModel.Amount} to {Reciever.CustomerName}"
+                };
+                var Transationreciever = new TransationRecords()
+                {
+                    Customer = Reciever,
+                    Date = DateTime.Now.ToLongDateString(),
+                    Time = DateTime.Now.ToShortTimeString(),
+                    Reports = $"Recieved #{transferModel.Amount} from {Sender.CustomerName}"
+                };
+
+
+                await _transationRepo.AddAsync(TransationSender);
+                await _transationRepo.AddAsync(Transationreciever);
+                await _unitOfWork.SaveChangesAsync();
+
+                return (true, "Transfer Successful");
+            }
+            else
+            {
+                return (false, "Transfer Unsuccessful");
+            }
+
         }
 
         public async Task<decimal> ViewBalanceAsync(Customer customer)
@@ -152,23 +172,32 @@ namespace ATM.BLL.Implementation
             }
         }
 
-        public async Task<bool> WithdrawalAsync(string CardNo, decimal Amount)
+        public async Task<(bool successful, string msg)> WithdrawalAsync(DepositOrWithdraw withdraw)
         {
             using (var context = new AtmDbContext())
             {
-                var User = await context.Customers.SingleOrDefaultAsync(a => a.CardNo == $"\"{CardNo}\"");
+                var User = await context.Customers.SingleOrDefaultAsync(a => a.PinNo == $"\"{withdraw.CustomerPin}\"");
 
                 if (User != null)
                 {
-                    User.Balance = User.Balance - Amount;
+                    User.Balance = User.Balance - withdraw.Amount;
 
-                    await context.SaveChangesAsync();
+                    var TransationSender = new TransationRecords()
+                    {
+                        Customer = User,
+                        Date = DateTime.Now.ToLongDateString(),
+                        Time = DateTime.Now.ToShortTimeString(),
+                        Reports = $"Withdrew #{withdraw.Amount} from account"
+                    };
 
-                    return true;
+                    await _transationRepo.AddAsync(TransationSender);
+                    await _unitOfWork.SaveChangesAsync();
+
+                    return (true, "Withdraw Successful");
                 }
                 else
                 {
-                    return false;
+                    return (false, "Withdraw Unsuccessful");
                 }
             }
         }
