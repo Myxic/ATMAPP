@@ -99,11 +99,11 @@ namespace ATM.BLL.Implementation
 
         }
 
-        public async Task<(bool successful, string msg)> DeleteCustomerRecordsAsync(Admin admin, string CustomerCardNo)
+        public async Task<(bool successful, string msg)> DeleteCustomerRecordsAsync(Admin admin, DeleteCustomer deleteCustomer)
         {
-            var customer = await  _CustomerRepo.GetSingleByAsync(a => a.CardNo == $"\"{CustomerCardNo}\"");
+            var customer = await  _CustomerRepo.GetSingleByAsync(a => a.CardNo == $"\"{deleteCustomer.CustomerCardNo}\"");
 
-            if (customer != null)
+            if (customer != null && deleteCustomer.AdminPin == admin.AdminPin)
             {
                 var workflow = new Workflow
                 {

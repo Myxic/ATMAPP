@@ -12,7 +12,7 @@ namespace ATM.BLL.Interface
 
         Task<(bool successful,string msg)> CreateNewCustomerRecordAsync(Admin admin, Customer customer);
 
-        Task<(bool successful, string msg)> DeleteCustomerRecordsAsync(Admin admin, string CustomerCardNo);
+        Task<(bool successful, string msg)> DeleteCustomerRecordsAsync(Admin admin, DeleteCustomer deleteCustomer);
 
         Task<IEnumerable<Workflow>> GetAdminWorkFlowAsync(Admin admin);
 
