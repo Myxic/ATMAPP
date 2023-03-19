@@ -18,13 +18,14 @@ namespace ATM.DAL.Model
         public string CardNo { get; set; } = null!;
 
         [Required]
-        [RegularExpression(@"^([0-9]{4})$", ErrorMessage = "Incorrect AdminPin format")]
+        [RegularExpression(@"^([0-9]{4})$", ErrorMessage = "Incorrect Pin format")]
         public string PinNo { get; set; } = null!;
 
         [Required]
         [Column(TypeName = "decimal(,2)")]
         public decimal Balance { get; set; }
 
+        [Required]
         [RegularExpression(@"^([0-9]{3})-([0-9]{3})-([0-9]{4})$", ErrorMessage = "Incorrect format (Sample: \"608-301-0103\" )")]
         public string? PhoneNumber { get; set; }
 

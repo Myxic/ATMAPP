@@ -32,7 +32,7 @@ namespace ATM.MVC.Controllers
 
         public IActionResult DeleteUserForm()
         {
-            return View();
+            return View(new DeleteCustomer());
         }
 
         public IActionResult AddUser()
@@ -47,6 +47,7 @@ namespace ATM.MVC.Controllers
 
             return View(Model);
         }
+
         public async Task<IActionResult> ViewWorkFlow(Admin admin)
         {
             var Model = await _adminService.GetAdminWorkFlowAsync(admin);
@@ -59,12 +60,7 @@ namespace ATM.MVC.Controllers
             return View(new UpdateCustomer()); 
 	    }
 
-        //[HttpGet]
-        //public async Task<IActionResult> LoginValidation(IAdminOperations AdminOperation)
-        //{
-        //    var validation = AdminOperation.
-
-        //}
+     
 
         [HttpPut]
         public async Task<IActionResult> Update(UpdateCustomer model, Admin admin)
@@ -114,15 +110,15 @@ namespace ATM.MVC.Controllers
 
                 ViewBag.ErrMsg = msg;
 
-                return View("DeleteUserForm");
+                return View("AddUser");
 
             }
 
-            return View("DeleteUserForm");
+            return View("AddUser");
         }
 
         [HttpDelete]
-        public async Task<IActionResult> Delete(Admin admin, string model)
+        public async Task<IActionResult> Delete(Admin admin, DeleteCustomer model)
         {
 
             if (ModelState.IsValid)
@@ -135,18 +131,18 @@ namespace ATM.MVC.Controllers
 
                     TempData["SuccessMsg"] = msg;
 
-                    return RedirectToAction("Index");
+                    return RedirectToAction("DeleteUserForm");
                 }
 
                 // TempData["ErrMsg"] = msg; for both views and redirect to actions
 
                 ViewBag.ErrMsg = msg;
 
-                return View("AddUser");
+                return View("DeleteUserForm");
 
             }
 
-            return View("AddUser");
+            return View("DeleteUserForm");
         }
 
         // GET: /<controller>/
