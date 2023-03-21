@@ -23,14 +23,25 @@ public class Program
         // Add services to the container.
         builder.Services.AddControllersWithViews();
 
-        //builder.Services.AddScoped<IUnitOfWork, UnitOfWork<AtmDbContext>>();
+        builder.Services.AddDbContext<AtmDbContext>(opts =>
+        {
+            // this will only work if there's a section called ConnectionStrings on the appSettings
+            // var defaultConn = builder.Configuration.GetConnectionString("DefaultConn");
 
-        //builder.Services.AddScoped<ICustomerOperation, CustomerOperation>();
+            var defaultConn = builder.Configuration.GetSection("ConnectionString")["DefaultConn"];
 
-        //builder.Services.AddScoped<IAdminOperations, AdminOperation>();
+            opts.UseSqlServer(defaultConn);
+
+        });
+
+        builder.Services.AddScoped<IUnitOfWork, UnitOfWork<AtmDbContext>>();
+
+        builder.Services.AddScoped<ICustomerOperation, CustomerOperation>();
+
+        builder.Services.AddScoped<IAdminOperations, AdminOperation>();
 
         //builder.Services.AddScoped<IRepository, Repository>();
-          
+
         //builder.Services.AddI
 
 

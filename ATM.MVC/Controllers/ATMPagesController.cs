@@ -24,7 +24,7 @@ namespace ATM.MVC.Controllers
         public  IActionResult Index()
         {
            
-            return View(new Customer());
+            return View();
         }
 
         public IActionResult Deposit()
