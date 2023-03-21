@@ -1,4 +1,5 @@
 ﻿using ATM.DAL.Repository;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ATM.DAL.Repository
 {
-    public class UnitOfWork<TContext> : IUnitOfWork where TContext : DbContext
+    public class UnitOfWork<TContext> : IUnitOfWork where TContext : IdentityDbContext
     {
         private Dictionary<Type, object> _repositories;
         private readonly TContext _context;
