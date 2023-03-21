@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "hV7B1pf8OZXTmUmGHxiMkNCc4zEG5mAkuJY0iuKWIe8=",
+  "Hash": "Cz6rJ06b55dr65sx2pxWhUBfdIPiUmOEAsLQXkJg/28=",
   "Source": "ATM.MVC",
   "BasePath": "_content/ATM.MVC",
   "Mode": "Default",
@@ -236,6 +236,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/img/stats-img.svg"
+    },
+    {
+      "Identity": "/Users/mac/Desktop/My c# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.MVC/wwwroot/img/team/team-4.jpeg",
+      "SourceId": "ATM.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/mac/Desktop/My c# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.MVC/wwwroot/",
+      "BasePath": "_content/ATM.MVC",
+      "RelativePath": "img/team/team-4.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/img/team/team-4.jpeg"
     },
     {
       "Identity": "/Users/mac/Desktop/My c# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.MVC/wwwroot/img/testimonials/testimonials-1.jpg",

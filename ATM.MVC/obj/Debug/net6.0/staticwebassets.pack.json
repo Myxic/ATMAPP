@@ -49,6 +49,10 @@
       "PackagePath": "staticwebassets/img/stats-img.svg"
     },
     {
+      "Id": "/Users/mac/Desktop/My c# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.MVC/wwwroot/img/team/team-4.jpeg",
+      "PackagePath": "staticwebassets/img/team/team-4.jpeg"
+    },
+    {
       "Id": "/Users/mac/Desktop/My c# Projects/My-Genaral-C--PROJECTS/ATMAPP/ATM.MVC/wwwroot/img/testimonials/testimonials-1.jpg",
       "PackagePath": "staticwebassets/img/testimonials/testimonials-1.jpg"
     },
