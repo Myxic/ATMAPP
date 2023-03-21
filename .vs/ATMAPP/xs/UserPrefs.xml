@@ -1,11 +1,11 @@
-﻿<Properties StartupConfiguration="{C58C578E-7E37-4E19-BEE8-AA0D02609483}|Default">
+﻿<Properties StartupConfiguration="{75E33778-4CD4-4900-8136-054E3F74AA64}|Default">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ATM.MVC/Controllers/AdminPagesController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ATM.MVC/appsettings.Development.json">
     <Files>
       <File FileName="ATM.MVC/Controllers/ATMPagesController.cs" />
       <File FileName="ATM.MVC/Views/Home/Index.cshtml" />
       <File FileName="ATM.MVC/Views/Home/AdminLogin.cshtml" />
-      <File FileName="ATM.MVC/Controllers/AdminPagesController.cs" Line="55" Column="32" />
+      <File FileName="ATM.MVC/Controllers/AdminPagesController.cs" />
       <File FileName="ATM.DAL/Interface /IAdminCurdOperation.cs" />
       <File FileName="ATM.DAL/Implementation /AdminCurdOperation.cs" />
       <File FileName="ATM.DAL/Interface /ICustomerCurdOperation.cs" />
@@ -44,8 +44,17 @@
       <File FileName="ATM.DAL/Entities/Customer.cs" />
       <File FileName="ATM.MVC/Views/AdminPages/DeleteUserForm.cshtml" />
       <File FileName="ATM.BLL/Models/DeleteCustomer.cs" />
-      <File FileName="ATM.MVC/Dockerfile" Line="25" Column="1" />
-      <File FileName="docker-compose.yml" Line="1" Column="1" />
+      <File FileName="ATM.MVC/Views/ATMPages/Deposit.cshtml" />
+      <File FileName="ATM.BLL/Models/DepositOrWithdraw.cs" />
+      <File FileName="ATM.MVC/Views/ATMPages/ChangePin.cshtml" />
+      <File FileName="ATM.MVC/Views/ATMPages/WithdrawalForm.cshtml" />
+      <File FileName="ATM.MVC/Views/ATMPages/TransferForm.cshtml" />
+      <File FileName="ATM.BLL/Models/TransferModel.cs" />
+      <File FileName="ATM.BLL/Interface/ICustomerOperation.cs" />
+      <File FileName="ATM.BLL/Models/ChangePinModel.cs" />
+      <File FileName="ATM.MVC/Views/ATMPages/View_History.cshtml" />
+      <File FileName="ATM.DAL/Entities/TransationRecords.cs" />
+      <File FileName="ATM.MVC/appsettings.Development.json" Line="14" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -60,13 +69,23 @@
               <Node name="Entities" expanded="True" />
             </Node>
             <Node name="ATM.MVC" expanded="True">
-              <Node name="Controllers" expanded="True">
-                <Node name="AdminPagesController.cs" selected="True" />
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
               </Node>
-              <Node name="Views" expanded="True" />
+              <Node name="Controllers" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="AdminPages" expanded="True" />
+                <Node name="ATMPages" expanded="True" />
+              </Node>
+              <Node name="appsettings.json" expanded="True">
+                <Node name="appsettings.Development.json" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
