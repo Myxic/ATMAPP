@@ -2,13 +2,14 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using ATM.DAL.Model;
+using Microsoft.AspNetCore.Identity;
 
 namespace ATM.DAL.Model
 {
-    public class Customer 
+    public class Customer : IdentityUser  
     {
         [Key]
-        public int Id;
+        public new int Id;
         [Required]
         [RegularExpression(@"[A-Za-z]{1,}", ErrorMessage = "This Value cant be empty")]
         public string CustomerName { get; set; } = null!;

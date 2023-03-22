@@ -3,6 +3,7 @@ using ATM.BLL.Implementation;
 using ATM.DAL.Repository;
 using ATM.DAL.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 namespace ATM.MVC;
 
@@ -30,9 +31,15 @@ public class Program
 
             var defaultConn = builder.Configuration.GetSection("ConnectionString")["DefaultConn"];
 
-            opts.UseSqlServer(defaultConn);
+            opts.UseSqlServer(defaultConn, x => x.MigrationsAssembly("ATM.DAL")
+            );
 
         });
+
+        builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+            .AddEntityFrameworkStores<AtmDbContext>()
+            .AddDefaultTokenProviders();
+
 
         builder.Services.AddScoped<IUnitOfWork, UnitOfWork<AtmDbContext>>();
 
